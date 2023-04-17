@@ -1,0 +1,128 @@
+:root   {
+
+    --DesaturatedRed: hsl(0, 36%, 70%);
+    --Softred: hsl(0, 93%, 68%);
+    --DarkGrayishRed: hsl(0, 6%, 24%);
+}
+
+*   {
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:inherit
+}
+img {
+    inline-size: 100%;
+    object-fit: cover;
+}
+a:hover {
+    color: var(--Softred);
+}
+body    {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+main    {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+
+.main__logo {
+    max-inline-size:33%;
+    margin: 2em;
+}
+
+.main__content  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 2rem;
+    gap: 1rem;
+}
+.main__title    {
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    color: var(--DarkGrayishRed);
+    letter-spacing: .5rem;
+    text-align: center;
+
+    font-weight: 600;
+
+}
+
+.main__title::first-line    {
+    color: var(--DesaturatedRed);
+    font-weight: 200;
+}
+.main__hero{
+    display: flex;
+    position: relative;
+    max-inline-size: 100%;
+
+}
+
+.hero--overlay::after    {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.401);
+    height: 100%;
+    width: 100%;
+}
+
+.main__info {
+    color: var(--DesaturatedRed);
+    font-size: .9em;
+    text-align: center;
+    line-height: 1.4em;
+}
+.main__form {
+    inline-size: 100%;
+    position: relative;
+}
+.emailInput {
+    border: 2px solid var(--DesaturatedRed);
+    border-radius: 2rem;
+    padding: 1rem;
+    inline-size: 100%;
+}
+
+.emailInput--invalid    {
+    border: 2px solid var(--Softred);
+    background: no-repeat 75% url(../images/icon-error.svg);
+}
+
+.main__form--invalid::after {
+    content: "Please provide a valid email";
+    color: var(--Softred);
+    position: absolute;
+    left: 1rem;
+    bottom:0;
+    transform: translateY(150%);
+    
+}
+.submitButton   {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background:no-repeat center url(../images/icon-arrow.svg),
+     linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+    width: 20%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.attribution    {
+    max-inline-size:25ch;  
+    margin: 0 auto;  
+    line-height: 1.2rem;
+    text-align: center;
+}
+
