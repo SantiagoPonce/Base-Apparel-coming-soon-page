@@ -15,6 +15,7 @@ a{
 img {
     inline-size: 100%;
     object-fit: cover;
+    block-size: auto;
 }
 a:hover {
     color: var(--Softred);
@@ -63,8 +64,6 @@ main    {
 .main__hero{
     display: flex;
     position: relative;
-    max-inline-size: 100%;
-
 }
 
 .hero--overlay::after    {
@@ -126,3 +125,45 @@ main    {
     text-align: center;
 }
 
+/* Desktop*/
+
+@media screen and (min-width:768px) {
+
+    body    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    main    {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .main__logo {
+        position: absolute;
+        top: 0;
+        inline-size: 15%;
+    }
+
+    .main__content  {
+        order: 1;
+        gap: 3rem;
+        align-items: center;
+        inline-size: 100%;
+    }
+
+    .main__hero {
+        order: 2;
+    }
+    .main__title    {
+        inline-size: 10ch;
+    }
+
+    .main__info {
+        inline-size: 40ch;
+    }
+    .main__form {
+        inline-size: 75%;
+    }
+    }
